@@ -3,8 +3,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CoinCombo;
 using System.Collections.Generic;
 
-// namespace CoinCombo.Test
-// {
+namespace CoinCombo.Test
+{
+  [TestClass]
   public class CoinComboTest
   {
     // [TestMethod]
@@ -22,7 +23,8 @@ using System.Collections.Generic;
       CoinGame number = new CoinGame();
       int expectedResult = 2;
       int coin = 20;
-      Assert.AreEqual(expectedResult, number.GetDimes(coin));
+      number.GettingChange(coin);
+      Assert.AreEqual(expectedResult, number.GetDimes());
     }
   }
-// }
+}
